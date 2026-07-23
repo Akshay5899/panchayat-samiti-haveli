@@ -1,6 +1,6 @@
 import pagesData from "../data/pagesData"
 import SubPageLayout from "../components/SubPageLayout"
-import { Helmet } from 'react-helmet-async'
+import Seo from "../components/Seo"
 
 function DynamicPage() {
   const path = decodeURI(window.location.pathname)
@@ -25,13 +25,12 @@ function DynamicPage() {
   if (!page) {
     return (
       <>
-        <Helmet>
-          <title>पृष्ठ मिळाले नाही - पंचायत समिती पुणे</title>
-          <meta name="description" content="मागितलेला पृष्ठ मिळाले नाही" />
-        <meta property="og:type" content="website" />
-        <meta name="robots" content="index, follow" />
-          <link rel="canonical" href={`https://panchayat-samiti-pune.com${path}`} />
-        </Helmet>
+        <Seo
+          title="पृष्ठ मिळाले नाही"
+          description="मागितलेला पृष्ठ उपलब्ध नाही किंवा अद्याप तयार केलेले नाही."
+          url={`https://panchayat-samiti-pune.com${path}`}
+          noindex={true}
+        />
         <div className="container mt-5 text-center">
           <h1>404 - पृष्ठ मिळाले नाही</h1>
           <p className="lead mt-3">मागितलेला पृष्ठ उपलब्ध नाही किंवा अजून तयार नाही।</p>
@@ -46,17 +45,12 @@ function DynamicPage() {
 
   return (
     <>
-      <Helmet>
-        <title>{page.title}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content={`${page.title}, पंचायत समिती पुणे, जिल्हा परिषद`} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="website" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:url" content={`https://panchayat-samiti-pune.com${path}`} />
-        <link rel="canonical" href={`https://panchayat-samiti-pune.com${path}`} />
-      </Helmet>
+      <Seo
+        title={page.title}
+        description={description}
+        keywords={`${page.title}, पंचायत समिती पुणे, जिल्हा परिषद`}
+        url={`https://panchayat-samiti-pune.com${path}`}
+      />
       <SubPageLayout
         title={page.title}
         date={page.date}

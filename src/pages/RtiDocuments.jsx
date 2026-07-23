@@ -1,7 +1,7 @@
 
 import "../styles/rtidocuments.css"
 import BannerAll from "../components/BannerAll";
-import { Helmet } from 'react-helmet-async';
+import Seo from "../components/Seo";
 
 const documents = [
   {
@@ -35,15 +35,12 @@ const documents = [
 const RtiDocuments = () => {
   return (
     <>
-      <Helmet>
-        <title>माहितीचा अधिकार कागदपत्रे - पंचायत समिती पुणे</title>
-        <meta name="description" content="पंचायत समिती पुणे मध्ये माहिती अधिकार अधिनियम 2005 अंतर्गत उपलब्ध कागदपत्रे आणि अर्ज डाउनलोड करा." />
-        <meta name="keywords" content="RTI, माहिती अधिकार, कागदपत्रे, पंचायत समिती पुणे" />
-        <meta property="og:title" content="माहितीचा अधिकार कागदपत्रे - पंचायत समिती पुणे" />
-        <meta property="og:description" content="माहिती अधिकार अधिनियम अंतर्गत उपलब्ध कागदपत्रे आणि अर्ज." />
-        <meta property="og:url" content="https://panchayat-samiti-pune.com/माहिती-अधिकार/माहितीचा-अधिकार-कागदपत्रे" />
-        <link rel="canonical" href="https://panchayat-samiti-pune.com/माहिती-अधिकार/माहितीचा-अधिकार-कागदपत्रे" />
-      </Helmet>
+      <Seo
+        title="माहितीचा अधिकार कागदपत्रे"
+        description="पंचायत समिती पुणे मध्ये माहिती अधिकार अधिनियम 2005 अंतर्गत उपलब्ध कागदपत्रे आणि अर्ज डाउनलोड करा."
+        keywords="RTI, माहिती अधिकार, कागदपत्रे, पंचायत समिती पुणे"
+        url="https://panchayat-samiti-pune.com/माहिती-अधिकार/माहितीचा-अधिकार-कागदपत्रे"
+      />
       <div>
         <BannerAll />
         <div className="subpage-content container">

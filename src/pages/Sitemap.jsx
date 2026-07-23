@@ -1,7 +1,7 @@
 ﻿import { menuItems } from "../data/menu"; // import your menu
 import "../styles/sitemap.css";
 import BannerAll from "../components/BannerAll";
-import { Helmet } from 'react-helmet-async';
+import Seo from "../components/Seo";
 
 function Sitemap({ title }) {
   const renderSitemap = (items, isTopLevel = false) => {
@@ -27,17 +27,12 @@ function Sitemap({ title }) {
 
   return (
     <>
-      <Helmet>
-        <title>साइटमॅप - पंचायत समिती पुणे</title>
-        <meta name="description" content="पंचायत समिती पुणे संकेतस्थळाचे संपूर्ण साइटमॅप - सर्व पृष्ठे आणि विभाग येथे शोधा." />
-        <meta name="keywords" content="साइटमॅप, पंचायत समिती पुणे, विभाग, पृष्ठे" />
-        <meta property="og:title" content="साइटमॅप - पंचायत समिती पुणे" />
-        <meta property="og:description" content="पंचायत समिती पुणे संकेतस्थळाचे संपूर्ण साइटमॅप - सर्व पृष्ठे आणि विभाग येथे शोधा." />
-        <meta property="og:url" content="https://panchayat-samiti-pune.com/साइटमॅप" />
-        <meta property="og:type" content="website" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://panchayat-samiti-pune.com/साइटमॅप" />
-      </Helmet>
+      <Seo
+        title="साइटमॅप"
+        description="पंचायत समिती पुणे संकेतस्थळाचे संपूर्ण साइटमॅप - सर्व पृष्ठे आणि विभाग येथे शोधा."
+        keywords="साइटमॅप, पंचायत समिती पुणे, विभाग, पृष्ठे"
+        url="https://panchayat-samiti-pune.com/साइटमॅप"
+      />
       <BannerAll />
       <div className="sitemap-page">
         <div className="container">

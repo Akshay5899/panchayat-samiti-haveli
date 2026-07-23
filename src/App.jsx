@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { Helmet } from 'react-helmet-async'
+import Seo from "./components/Seo"
 
 import Header from "./components/Header"
 import Footer from "./components/Footer"
@@ -20,17 +20,12 @@ import RtiDocuments from "./pages/RtiDocuments";
 function Home() {
   return (
     <>
-      <Helmet>
-        <title>पंचायत समिती पुणे - अधिकृत संकेतस्थळ</title>
-        <meta name="description" content="पंचायत समिती पुणे अधिकृत संकेतस्थळ - विभाग, सेवा, मार्गदर्शन आणि संपर्क माहिती." />
-        <meta name="keywords" content="पंचायत समिती पुणे, ग्रामपंचायत, सरकारी योजना, संपर्क, विभाग" />
-        <meta property="og:title" content="पंचायत समिती पुणे - अधिकृत संकेतस्थळ" />
-        <meta property="og:description" content="पंचायत समिती पुणे अधिकृत संकेतस्थळ - विभाग, सेवा, मार्गदर्शन आणि संपर्क माहिती." />
-        <meta property="og:url" content="https://panchayat-samiti-pune.com/" />
-        <meta property="og:type" content="website" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://panchayat-samiti-pune.com/" />
-      </Helmet>
+      <Seo
+        title="अधिकृत संकेतस्थळ"
+        description="पंचायत समिती पुणे अधिकृत संकेतस्थळ - विभाग, सेवा, मार्गदर्शन आणि संपर्क माहिती."
+        keywords="पंचायत समिती पुणे, ग्रामपंचायत, सरकारी योजना, संपर्क, विभाग"
+        url="https://panchayat-samiti-pune.com/"
+      />
       <Hero />
 
       <div className="about-leaders-section">

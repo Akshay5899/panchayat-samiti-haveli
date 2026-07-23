@@ -1,5 +1,5 @@
 import React from "react";
-import { Helmet } from 'react-helmet-async';
+import Seo from "../components/Seo";
 
 // Same data (English + Marathi)
 const searchData = [
@@ -35,17 +35,13 @@ const Search = () => {
 
   return (
     <>
-      <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={description} />
-        <meta name="keywords" content="शोध, पंचायत समिती पुणे, ग्रामीण विकास" />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="website" />
-        <meta name="robots" content="index, follow" />
-        <meta property="og:url" content={`https://panchayat-samiti-pune.com/search?q=${encodeURIComponent(query)}`} />
-        <link rel="canonical" href={`https://panchayat-samiti-pune.com/search?q=${encodeURIComponent(query)}`} />
-      </Helmet>
+      <Seo
+        title={pageTitle}
+        description={description}
+        keywords="शोध, पंचायत समिती पुणे, ग्रामीण विकास"
+        url={`https://panchayat-samiti-pune.com/search?q=${encodeURIComponent(query)}`}
+        noindex={true}
+      />
       <div className="container mt-4">
         <h2>Search Results for: "{query}"</h2>
         {results.length === 0 ? (
