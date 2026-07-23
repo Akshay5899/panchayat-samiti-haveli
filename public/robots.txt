@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://panchayat-samiti-pune.com/sitemap.xml

@@ -1,16 +1,17 @@
-import { Link, useLocation } from "react-router-dom"
 import pagesData from "../data/pagesData"
 
 export default function Breadcrumb(){
 
-  const location = useLocation()
+  const paths = window.location.pathname.split("/").filter(Boolean)
 
-  const paths = location.pathname.split("/").filter(Boolean)
+  const navigate = (path) => {
+    window.location.href = path;
+  };
 
   return(
     <div className="breadcrumb">
 
-      <Link to="/">मुख्यपृष्ठ</Link>
+      <a href="/" onClick={(e) => { e.preventDefault(); navigate('/'); }}>मुख्यपृष्ठ</a>
 
       {paths.map((path,index)=>{
 
@@ -28,7 +29,7 @@ export default function Breadcrumb(){
 
             {index === paths.length-1
               ? <span>{title}</span>
-              : <Link to={href}>{title}</Link>
+              : <a href={href} onClick={(e) => { e.preventDefault(); navigate(href); }}>{title}</a>
             }
 
           </span>

@@ -14,7 +14,7 @@ function AboutSection() {
             <img
               src="/images/panchayat-building.png"
               className="img-fluid about-img"
-              alt="Panchayat Samiti"
+              alt="पंचायत समिती इमारत - ग्रामीण विकास कार्यालय"
             />
 
           </div>

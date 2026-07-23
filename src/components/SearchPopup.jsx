@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-import { useNavigate } from "react-router-dom";
 import "./SearchPopup.css";
 
 const searchData = [
@@ -26,7 +25,6 @@ const SearchPopup = ({ onClose }) => {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState([]);
   const popupRef = useRef();
-  const navigate = useNavigate();
 
   useEffect(() => {
     const handleClickOutside = (e) => {
@@ -54,7 +52,7 @@ const SearchPopup = ({ onClose }) => {
     e.preventDefault();
     if (!query.trim()) return;
     onClose();
-    navigate(`/search?q=${encodeURIComponent(query)}`);
+    window.location.href = `/search?q=${encodeURIComponent(query)}`;
   };
 
   return (

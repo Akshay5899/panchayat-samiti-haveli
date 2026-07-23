@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import LanguageSwitch from "./LanguageSwitch";
 import Translator from "./Translator";
 import SideMenu from "./SideMenu";
@@ -36,6 +35,21 @@ function Header() {
     }
   };
 
+  // ✅ Navigate function - use History API for smooth navigation without page reload
+  const navigate = (path) => {
+    if (path && path !== '#' && path !== '') {
+      // Ensure path starts with /
+      const fullPath = path.startsWith('/') ? path : '/' + path;
+      const encodedPath = encodeURI(fullPath);
+
+      // Use History API to change URL without reloading page
+      window.history.pushState({ path: fullPath }, '', encodedPath);
+      
+      // Trigger a custom event so App component knows to update
+      window.dispatchEvent(new PopStateEvent('popstate', { state: { path: fullPath } }));
+    }
+  };
+
   // ✅ Recursive Menu
   const renderMenu = (items, parentKey = "") =>
     items.map((item, idx) => {
@@ -52,15 +66,17 @@ function Header() {
           <div className="d-flex justify-content-between align-items-center">
 
             {/* TEXT CLICK → NAVIGATE */}
-            <Link
-              to={item.path || "#"}
+            <a
+              href={item.path || "#"}
               className="nav-link flex-grow-1"
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
+                navigate(item.path);
                 if (window.innerWidth < 1200) closeMenu();
               }}
             >
               {item.name}
-            </Link>
+            </a>
 
             {/* ICON CLICK → OPEN SUBMENU */}
             {hasSubmenu && (
@@ -130,17 +146,17 @@ function Header() {
       <div className="top-header container-fluid">
         <div className="container d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-center gap-3">
-            <Link to="/">
+            <a href="/">
               <img src="/images/emblem.png" className="emblem" alt="Emblem" />
-            </Link>
+            </a>
 
             <div className="g-3">
-              <Link to="/" className="sitetitle">
+              <a href="/" className="sitetitle">
                 <h6 className="marathi-title">पंचायत समिती पुणे</h6>
-              </Link>
-              <Link to="/" className="sitetitle">
+              </a>
+              <a href="/" className="sitetitle">
                 <h2 className="site-title">Panchayat Samiti Pune</h2>
-              </Link>
+              </a>
             </div>
           </div>
 

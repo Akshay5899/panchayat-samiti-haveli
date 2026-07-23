@@ -36,7 +36,7 @@ function Footer() {
 
               <div className="footer-logo d-flex align-items-center gap-3">
 
-                <img src="/images/emblem.png" alt="logo" />
+                <img src="/images/emblem.png" alt="महाराष्ट्र शासनाचा लोगो" />
 
                 <div>
                   <a className="sitetitle" href="/"><strong>पंचायत समिती पुणे</strong></a>
