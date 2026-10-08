@@ -6,8 +6,8 @@ function Test() {
     <>
       <Seo
         title="निर्देशिका"
-        description="पंचायत समिती पुणे ची निर्देशिका आणि संपर्क माहिती."
-        keywords="निर्देशिका, संपर्क, पंचायत समिती पुणे"
+        description="पंचायत समिती हवेली ची निर्देशिका आणि संपर्क माहिती."
+        keywords="निर्देशिका, संपर्क, पंचायत समिती हवेली"
         url="https://panchayat-samiti-pune.com/निर्देशिका"
       />
       <div className="sitemap-page">

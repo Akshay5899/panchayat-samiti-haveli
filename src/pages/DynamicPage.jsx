@@ -47,7 +47,7 @@ function DynamicPage() {
       <Seo
         title={page.title}
         description={description}
-        keywords={`${page.title}, पंचायत समिती पुणे, जिल्हा परिषद`}
+        keywords={`${page.title}, पंचायत समिती हवेली, जिल्हा परिषद`}
         url={`https://panchayat-samiti-pune.com${path}`}
       />
       <SubPageLayout

@@ -30,15 +30,15 @@ const Search = () => {
     normalizeString(item).includes(normalizeString(query))
   );
 
-  const pageTitle = query ? `शोध परिणाम: "${query}" - पंचायत समिती पुणे` : "शोध - पंचायत समिती पुणे";
-  const description = query ? `पंचायत समिती पुणे मध्ये "${query}" साठी शोध परिणाम.` : "पंचायत समिती पुणे मध्ये माहिती शोधा.";
+  const pageTitle = query ? `शोध परिणाम: "${query}" - पंचायत समिती हवेली` : "शोध - पंचायत समिती हवेली";
+  const description = query ? `पंचायत समिती हवेली मध्ये "${query}" साठी शोध परिणाम.` : "पंचायत समिती हवेली मध्ये माहिती शोधा.";
 
   return (
     <>
       <Seo
         title={pageTitle}
         description={description}
-        keywords="शोध, पंचायत समिती पुणे, ग्रामीण विकास"
+        keywords="शोध, पंचायत समिती हवेली, ग्रामीण विकास"
         url={`https://panchayat-samiti-pune.com/search?q=${encodeURIComponent(query)}`}
         noindex={true}
       />

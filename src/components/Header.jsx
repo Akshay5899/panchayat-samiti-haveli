@@ -152,10 +152,10 @@ function Header() {
 
             <div className="g-3">
               <a href="/" className="sitetitle">
-                <h6 className="marathi-title">पंचायत समिती पुणे</h6>
+                <h6 className="marathi-title">पंचायत समिती हवेली</h6>
               </a>
               <a href="/" className="sitetitle">
-                <h2 className="site-title">Panchayat Samiti Pune</h2>
+                <h2 className="site-title">Panchayat Samiti Haveli</h2>
               </a>
             </div>
           </div>

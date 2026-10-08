@@ -1,4 +1,4 @@
-# Panchayat Samiti Pune - Complete Page Inventory & Menu Mapping
+# Panchayat Samiti Haveli - Complete Page Inventory & Menu Mapping
 
 ## ✅ ALL AVAILABLE PAGE SLUGS IN pagesData.js (29 pages)
 

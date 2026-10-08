@@ -39,8 +39,8 @@ function Footer() {
                 <img src="/images/emblem.png" alt="महाराष्ट्र शासनाचा लोगो" />
 
                 <div>
-                  <a className="sitetitle" href="/"><strong>पंचायत समिती पुणे</strong></a>
-                  <a className="sitetitle" href="/"><h5>Panchayat Samiti Pune</h5></a>
+                  <a className="sitetitle" href="/"><strong>पंचायत समिती हवेली</strong></a>
+                  <a className="sitetitle" href="/"><h5>Panchayat Samiti Haveli</h5></a>
                 </div>
 
               </div>

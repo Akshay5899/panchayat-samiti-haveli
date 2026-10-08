@@ -1,8 +1,8 @@
 import { Helmet } from 'react-helmet-async'
 
 const SITE_URL = 'https://panchayat-samiti-pune.com'
-const SITE_NAME = 'पंचायत समिती पुणे'
-const DEFAULT_DESCRIPTION = 'पंचायत समिती पुणे अधिकृत संकेतस्थळ - विभाग, सेवा, मार्गदर्शन आणि संपर्क माहिती.'
+const SITE_NAME = 'पंचायत समिती हवेली'
+const DEFAULT_DESCRIPTION = 'पंचायत समिती हवेली अधिकृत संकेतस्थळ - विभाग, सेवा, मार्गदर्शन आणि संपर्क माहिती.'
 const DEFAULT_IMAGE = `${SITE_URL}/images/pune-banner.png`
 
 const Seo = ({
