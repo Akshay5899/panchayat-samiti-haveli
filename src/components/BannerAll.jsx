@@ -1,7 +1,7 @@
 import Breadcrumb from "./Breadcrumb"
 import "../styles/subpage.css"
 
-export default function BannerAll({ title }) {
+export default function BannerAll() {
 
   return (
 

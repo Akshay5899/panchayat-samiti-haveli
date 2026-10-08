@@ -3,7 +3,7 @@ import "../styles/sitemap.css";
 import BannerAll from "../components/BannerAll";
 import Seo from "../components/Seo";
 
-function Sitemap({ title }) {
+function Sitemap() {
   const renderSitemap = (items, isTopLevel = false) => {
     return (
       <ul>

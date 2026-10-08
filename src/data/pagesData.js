@@ -649,7 +649,7 @@ const pagesData = {
       {
         list: [
           `कृषि विभाग, महाराष्ट्र राज्य –<a href="https://krishi.maharashtra.gov.in/" target="_blank">https://krishi.maharashtra.gov.in/</a>`,
-          `व <a href="https://mahadbt.maharashtra.gov.in/Farmer/Login" target="_blank">https://mahadbt.maharashtra.gov.in/Farmer/Login</a>`,
+          `व <a href="https://mahadbt.maharashtra.gov.in/Farmer/Login" target="_blank">https://mahadbt.maharashtra.gov.in/Farmer/Login</a>`,
           `कृषि निविष्ठा परवाने – <a href="https://aaplesarkar.mahaonline.gov.in/en" target="_blank">https://aaplesarkar.mahaonline.gov.in/en</a>`,
         ]
       },

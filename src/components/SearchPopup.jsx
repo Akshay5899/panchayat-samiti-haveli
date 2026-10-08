@@ -23,7 +23,6 @@ const normalizeString = (str) =>
 
 const SearchPopup = ({ onClose }) => {
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState([]);
   const popupRef = useRef();
 
   useEffect(() => {
@@ -34,18 +33,10 @@ const SearchPopup = ({ onClose }) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [onClose]);
 
-  // Filter live results
-  useEffect(() => {
-    if (!query.trim()) {
-      setResults([]);
-      return;
-    }
-    const normalizedQuery = normalizeString(query);
-    const filtered = searchData.filter((item) =>
-      normalizeString(item).includes(normalizedQuery)
-    );
-    setResults(filtered);
-  }, [query]);
+  const normalizedQuery = normalizeString(query);
+  const results = query.trim()
+    ? searchData.filter((item) => normalizeString(item).includes(normalizedQuery))
+    : [];
 
   // Navigate to search page
   const handleSearch = (e) => {
@@ -78,7 +69,7 @@ const SearchPopup = ({ onClose }) => {
               <li
                 key={idx}
                 onClick={() => {
-                  navigate(`/search?q=${encodeURIComponent(item)}`);
+                  window.location.href = `/search?q=${encodeURIComponent(item)}`;
                   onClose();
                 }}
               >

@@ -40,7 +40,6 @@ function DynamicPage() {
     )
   }
 
-  const pageTitle = `${page.title} - पंचायत समिती पुणे`
   const description = page.content ? page.content[0].substring(0, 160) : "पुणे जिल्हा परिषद आणि पंचायत समिती विषयी माहिती."
 
   return (
